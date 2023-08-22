@@ -25,6 +25,8 @@ public class pretice2 {
 		System.out.println("수를 입력하시오: ");
 		int num = scanner.nextInt();
 		System.out.println(num>0? "양수" :(num <0? "음수" : "0"));
+		
+		
 	}
 
 }
