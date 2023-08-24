@@ -23,8 +23,9 @@ public class whileQuiz {
 	}
 	
 	int i = start;
+	int j = end;
 	int total = 0;
-	while(i<= end ) {
+	while(i<= j ) {
 		total += i;
 		i++;	
 		
@@ -35,7 +36,7 @@ public class whileQuiz {
 //	}
 	
 	
-	System.out.printf("%d부터 %d까지의 누적합계: %d ", x, y, total);
+	System.out.printf("%d부터 %d까지의 누적합계: %d ", start, end, total);
 	}
 
 }
