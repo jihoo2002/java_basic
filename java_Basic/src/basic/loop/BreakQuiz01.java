@@ -25,6 +25,9 @@ public class BreakQuiz01 {
 			int rn2 = (int)((Math.random()*100) +1);
 			int rn3 = (int)((Math.random()*100) +1);
 			int rn4 = (int)((Math.random()*100) +1);
+			//int num = (int)(Math.random()*2); 0.1~1.0-> 0~2미만
+			//int correct;
+			//if(num ==0) {
 			
 			System.out.println(rn + "+" + rn2 + "=" + "???");
 			
@@ -66,6 +69,7 @@ public class BreakQuiz01 {
 		System.out.println("정답횟수 :" + count + "회");
 		System.out.println("오답횟수 :" + count2 + "회");
 		
+	sc.close();
 	}
 
 }
