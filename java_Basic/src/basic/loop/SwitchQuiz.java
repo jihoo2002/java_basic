@@ -33,7 +33,12 @@ public class SwitchQuiz {
 			total = num * num2;
 			break;
 		case "/":
+			if(num2 ==0) {
+				System.out.println("연산할 수 없는 입력값입니다");
+				break;
+			}
 			total = num /num2;
+			
 			break;
 		case "%":
 			total = num%num2;

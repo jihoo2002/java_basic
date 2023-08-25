@@ -32,25 +32,23 @@ int num1 = sc.nextInt();
 int num2 = sc.nextInt();
 int num3 = sc.nextInt();
 
-int max =0;
-int mid =0;
-int min = 0;
+int max , mid, min;
+
+
 
 
 if((num1>num2&&num1<num3)||(num1<num2 &&num1>num3)) {
-	//1이 제일 중간값일때 2가 제일 작은 값 3이 제일 큰 값
+	//1이 제일 중간값일때 
 	mid = num1;
-//	
-	
 
 	if(num2<num3) {
 		max = num3;
 		min = num2;
-//	
-	}else if(num3<num2) {
+	
+	}else {
 		max = num2;
 		min = num3;
-//		
+		
 	}
 
 
@@ -59,23 +57,32 @@ if((num1>num2&&num1<num3)||(num1<num2 &&num1>num3)) {
 }else if((num2>num1 && num2<num3)||(num2<num1 && num2>num3)) {
 	//2이 제일 중간값일때
 	mid = num2;
-//	
+	
 	if(num1<num3) {
 		max = num3;
 		min = num1;
-//	
-		}else if(num3<num1) {
+	
+		}else  {
 			max = num1;
 			min = num3;
-//			
+		
 		}
 
 }else {
 	mid = num3;
-//
+	if(num1>num2) {
+		max = num1;
+		min = num2;
+	} else {
+		max = num2;
+		min = num1;
+	}
+
 
 }	
-System.out.println("Max: " + max + "Mid: " +mid + "Min: " +min);
+System.out.println("Max: " + max );
+System.out.println("Mid: " +mid );
+System.out.println("Min: " +min);
 		
 
 	}

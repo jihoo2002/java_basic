@@ -12,8 +12,8 @@ public class whileQuiz {
 	int y = sc.nextInt();
 	
 	
-	
-	
+	//삼항 연산자로도 해결할 수 있음
+
 	int start =x;
 	int end = y;
 	
@@ -24,16 +24,15 @@ public class whileQuiz {
 	
 	int i = start;
 	int j = end;
+	
 	int total = 0;
+	
 	while(i<= j ) {
 		total += i;
 		i++;	
 		
 	}
-//	while(x>y) {
-//		total += y;
-//		y--;
-//	}
+
 	
 	
 	System.out.printf("%d부터 %d까지의 누적합계: %d ", start, end, total);

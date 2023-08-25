@@ -3,25 +3,45 @@ import java.util.Scanner;
 public class Pretice1 {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
+		/*
+        - 정수를 하나 입력받아서 해당 숫자까지의 모든 소수를
+         가로로 출력하고, 그 소수들의 개수를 구하는 로직을 작성합니다.
+         
+        ex)
+        입력받은 수 -> 30
+        소수: 2 3 5 7 11 13 17 19 23 29
+        소수의 개수: 10개
+       */
 		
-		System.out.print("이름을 입력하시오: ");
-		String name = scanner.next();
 		
-		System.out.print("나이를 입력하시오: ");
-		int age = scanner.nextInt();
 		
-		System.out.println("거주지를 입력하시오: ");
-		String area = scanner.next();
+		System.out.println("입력받은 수: ");
+		int num = sc.nextInt();
 		
-		int birth = 2023-age+1;
 		
-		System.out.println("================");
-		System.out.printf("이름: %s\n나이 : %d세\n출생년도: %d년\n 지역: %s\n"
-				, name, age, birth, area);
-		System.out.println("================");
+		int count =0;
+		System.out.println("소수: ");
 		
-		scanner.close();
+		for(int i=1; i<=num; i++) {
+			int cnt =0; //바깥에 있으묜 안되는건가여?@?@
+			
+			//1부터 입력받은 수까지 반복
+			for(int j =1; j<=i; j++) {
+				if(i%j ==0) {
+					cnt++; //약수갯수 세어줌
+					
+				}
+			}
+			if(cnt ==2) {
+				System.out.println(i + " ");
+				count++;
+				
+			}
+			
+		}
+	System.out.println("\n소수의 개수: " +count +"개");
+		
 	}
 
 }
