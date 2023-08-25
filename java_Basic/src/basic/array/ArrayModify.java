@@ -34,7 +34,7 @@ public class ArrayModify {
 				
 			}
 			//첫번째 방법
-//			}else if(i == foods.length-1) { //4개 
+//			}else if(i == foods.length-1) { //3개 
 //				System.out.println("없는 음식입니다.");
 //			}
 			
