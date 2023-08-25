@@ -34,65 +34,37 @@ public class EmployeeManager {
                 //사원 정보 4가지를 입력받아 각 배열에 저장하는 코드를 작성.
                 //사번은 중복되면 안됩니다.
                 //(무한루프를 구현해서 사번 중복이 발생하면 다시 입력받기.)//사번만 다시 입력받게 하기
-            	
-            		for(int i=0; i<100; i++) {
-            	System.out.print("사번을 입력하시오: ");
-            	String Nums = sc.next();
-          
-            	for(String n: userNums) {
-            		if(Nums.equals(n)) {
-            			System.out.println("사번이 중복됩니다. 다시 입력하세요");
-            			i--;
-            		}
-            	}
-            	
+            	for(int i=0; i<100; i++) {
+            		while(true) {
+            		System.out.println("사번: ");
+            		String num = sc.next();
+            		userNums[i] = num; //입력받은 값을 인덱스 배열 안에 집어넣음
             		
-            	
-     
-            	
-            	userNums[i] = Nums;
-            	
             		
-            	System.out.print("이름을 입력하시오: ");
-            	String name = sc.next();
-            	names[i] = name;
-            	
-            	System.out.print("나이를 입력하시오: ");
-            	int age = sc.nextInt();
-              	ages[i] = age;
-            	
-            	System.out.print("부서명을 입력하시오: ");
-            	String depa = sc.next();
-            	departments[i] = depa;
-            	
-            	if(Nums.equals("사원 정보 보여주세요.")) {
-            		System.out.println("==================");
-                	System.out.println("입력된 사원 정보: ");
-                	break;
-            	}
-            	
+            			for( String n :userNums ) {
+            				if(num.equals(n)) {
+            					System.out.println("이미 존재하는 사번입니다.");
+            					
+            				}
+            			}
             		}
-            	
-            	
-            	for(String n : names) {
-            		if(n == null) break;
-            		System.out.println(n + " ");
+            		
+            		System.out.println("이름: ");
+            		String name = sc.next();
+            		names[i] = name;
+            		
+            		System.out.println("나이: ");
+            		int age = sc.nextInt();
+            		ages[i] = age;
+            		
+            		System.out.println("부서명: ");
+            		String depa = sc.next();
+            		departments[i] = depa;
+            		break;
             	}
-            	
-            	for(int a : ages) {
-            		if(a == 0) break;
-            		System.out.println(a + " ");
-            	}
-            	
-            	for(String d : departments ) {
-            		if(d == null) break;
-            		System.out.println(d + " ");
-            	}
-            	
-            	
-            	
+            		
 
-            	
+            		
             	
             	
             	
