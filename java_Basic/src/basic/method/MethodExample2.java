@@ -26,6 +26,7 @@ public class MethodExample2 {
 		for(int i = start; i<=end; i++) {
 			total += i;
 		}
+		
 		return total;
 	}
 	//매개 변수가 필요없는 경우
@@ -64,6 +65,7 @@ public class MethodExample2 {
 		
 		
 	}
+	
 	public static void main(String[] args) {
 		
 		
@@ -75,7 +77,7 @@ public class MethodExample2 {
 		
 		System.out.println("오늘 점심 뭐먹지??? " + selectRandomFood());
 		
-		int[] arr = {10,30,50,70,90,110, 130};
+		int[] arr = {10,30,50,70,90,110,130};
 		int sum = calcNumberTotal(arr);
 		System.out.println("누적합: " + sum);
 		

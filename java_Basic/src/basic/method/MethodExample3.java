@@ -34,21 +34,23 @@ public class MethodExample3 {
 		return n1 + n2; //두 변수의 합을 반환
 		
 	}
+	
 	static int[] operateTotal(int n1, int n2) {
 		return new int[] {n1 +n2, n1-n2, n1*n2, n1/n2}; //return 발동됨과 동시에 값을 반환하고 함수를 종료시킨다.
 		//즉 리턴은 메서드 내에서 한번만 실행시킬 수 있다.
 		//값 여러개를 return 한번에 보내는 것은 배열로 수행
-		
 	}
+	
 	static double[] calcArrayTotal(int [] nums) {
 		int total =0;
 //		for(int i=0; i<nums.length; i++) {
 //			total += nums[i]; //합계
-//			
-//		}
+//}
+		
 		for(int n : nums) {
 			total += n;
 		}
+		
 		double avg = total /(double)nums.length;
 		return new double[]{total, avg};
 	}
@@ -57,6 +59,7 @@ public class MethodExample3 {
 		int result = n1 *n2;
 		System.out.printf("%d x %d = %d\n", n1, n2, result);
 	}
+	
 	static void divide(int n1, int n2) {
 		if(n2 == 0) {
 			System.out.println("0으로 나누시면 어떡해요~!");
@@ -67,6 +70,7 @@ public class MethodExample3 {
 		int result = n1/n2;
 		System.out.printf("%d /%d = %d\n", n1, n2, result);
 	}
+	
 	public static void main(String[] args) {
 	
 		int r1 = add(3, 8); //int r1 =11;
