@@ -37,7 +37,7 @@ static int indexOf(String targetName) {
 			return i;
 		}
 	}
-	return -1;
+	return -1; 
 }
 
 //4. 특정 음식의 배열 포함 여부 (include -> boolean)
