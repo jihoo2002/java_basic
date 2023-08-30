@@ -5,6 +5,7 @@ public class MethodQuiz01 {
 		int count = 0;
 		for(int i =1;i<=x; i++) {
 			if(x%i ==0) {
+				System.out.print(i + " ");
 				count++;
 			}
 		}

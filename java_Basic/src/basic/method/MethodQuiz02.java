@@ -3,6 +3,7 @@ import java.util.Arrays;
 
 public class MethodQuiz02 {
 	static String[] foods = {"떡볶이", "치킨", "파스타"};
+	
 //1. 배열의 맨 마지막 위치에 데이터를 추가하는 함수 (push -> void)
 //기존 배열보다 크기가 하나 큰 배열을 선언해서 값 고대로 내리기
 //매개값으로 전달된 값을 마지막 위치에 채우기
@@ -16,7 +17,7 @@ static void push(String x) {
 			//foods[3]했을 때 전달할 값이 없어 오류
 		}
 			arr[arr.length-1] = x; //값 집어넣기	
-			foods = arr;
+			foods = arr; //주소값을 넣어주어야 값이 알맞게 들어가진다
 	
 			
 		}

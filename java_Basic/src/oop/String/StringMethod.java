@@ -14,7 +14,7 @@ public class StringMethod {
 		
 		//subString(begin, end)
 		//:문자열을 범위를 지정하여 추출
-		String ss1 = str.substring(0, 5); //1부터 5미만!!
+		String ss1 = str.substring(1, 5); //1이상  5미만!!
 		System.out.println("ss1의 값:" +ss1);
 		
 		String ss2 = str.substring(6);//6부터 끝까지 추출
@@ -30,8 +30,9 @@ public class StringMethod {
 		int idx1 = str.indexOf("l"); //앞에서부터 탐색
 		System.out.println("idx1:" +idx1);
 		
-		int idx2 = str.lastIndexOf("l"); //뒤에서부터 탐색
+		int idx2 = str.lastIndexOf("a"); //뒤에서부터 탐색
 		System.out.println("idx2: " +idx2);
+		//왼쪽을 기준으로 맨 뒤에 있는 인덱스 번호 ? 
 		
 		
 		//여러 문자를 전달하면 시작 인덱스를 알려준다.
