@@ -33,6 +33,14 @@ public class MainClass {
 		
 		Warrior w1 = new Warrior("전사짱짱맨");
 		w1.characterInfo();
+		
+		System.out.println("=================");
+		
+		Mage m1 = new Mage("법사 짱짱맨");
+		m1.characterInfo();
+		
+		Hunter h1 = new Hunter("냥꾼 짱짱맨");
+		h1.characterInfo();
 	}
 
 }
