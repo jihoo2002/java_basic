@@ -87,4 +87,20 @@ public class MyBirth {
 		return this.day;
 	}
 	
+	//완성된 생일 정보를 출력해주는 메서드
+	public void birthInfo() {
+		//year,day,month 셋 중 단 하나라도 제대로 값이 셋팅되지 않았다면
+		//출력하지 않겠다.
+		
+	}
+	public void isValidateMonth() {
+		//각 월에 적합한 일자가 세팅이 되어 있는지 판별하는 메서드
+	}
+	
+	/*
+	 * 데이터와 데이터를 다루는 여러가지 메서드들을 하나로 묶는 이러한 행위들을
+	 * 캡슐화 라고 합니다. (encapsulation)
+	 * 데이터와 그 데이터를 다루는 로직을 하나로 묶어 쉽게 관리하고 유지 보수하기 
+	 * 위함 입니다. 
+	 */
 }
