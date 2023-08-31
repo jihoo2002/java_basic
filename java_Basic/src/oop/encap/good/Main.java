@@ -11,8 +11,11 @@ public class Main {
 		my.setYear(2002);
 		my.setMonth(5);
 		my.setDay(29);
-		System.out.printf("내 생일은 %d년 %d월 %d일입니다.", my.getYear(), my.getMonth(),
-				my.getDay());
+		
+		my.birthInfo();
+	
+		
+		
 		
 	
 

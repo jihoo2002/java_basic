@@ -39,6 +39,7 @@ public class MyBirth {
 	public void setYear(int year) {
 		if(year <1900 || year >2023) {
 			System.out.println("잘못된 연도 입력입니다.");
+			
 		}else {
 			this.year =year;
 		}
@@ -60,6 +61,7 @@ public class MyBirth {
 	public void setMonth(int month) {
 		if(month <1 || month >12) {
 			System.out.println("잘못된 월 입력입니다.");
+			
 		}else {
 			this.month = month;
 		}
@@ -79,7 +81,16 @@ public class MyBirth {
 	public void setDay(int day) {
 		if(day<1 || day>31) {
 			System.out.println("잘못된 일 입력입니다.");
+			return;
 		}else {
+			if(this.month == 0) {
+				System.out.println("일자를 입력하기 위해서는 월 입력이 선행되어야 합니다. ");
+				return; 
+			}
+			if(!isValiidateMonth(day)) { //isValiidateMonth가 false일때 
+				System.out.println("월에 따른 일자가 올바르지 않습니다.");
+				return;
+			}
 			this.day = day;
 		}
 	}
@@ -87,15 +98,39 @@ public class MyBirth {
 		return this.day;
 	}
 	
-	//완성된 생일 정보를 출력해주는 메서드
-	public void birthInfo() {
-		//year,day,month 셋 중 단 하나라도 제대로 값이 셋팅되지 않았다면
-		//출력하지 않겠다.
-		
-	}
-	public void isValidateMonth() {
+	
+	private boolean isValiidateMonth(int day) {
 		//각 월에 적합한 일자가 세팅이 되어 있는지 판별하는 메서드
+		//2 =28,4=30,6=30 9, 11 =30	
+		switch(this.month) {
+		case 4: case 6: case 9: case 11:
+			if(day >30) {
+				return false;
+			}
+			
+		case 2:
+			if(day >28) {
+				return false;
+			}
+		default :
+			return true;
+		}
 	}
+	
+	
+	
+	//완성된 생일 정보를 출력해주는 메서드
+		public void birthInfo() {
+			if(this.year ==0 || this.day ==0 || this.month ==0) {
+				System.out.println("날짜 필드 중에 초기화 되지 않은 데이터가 있습니다.");
+				return;
+			}
+			
+				System.out.printf("내 생일은 %d년 %d월 %d일입니다.\n"
+						,this.year, this.month, this.day);
+			
+		}
+}
 	
 	/*
 	 * 데이터와 데이터를 다루는 여러가지 메서드들을 하나로 묶는 이러한 행위들을
@@ -103,4 +138,4 @@ public class MyBirth {
 	 * 데이터와 그 데이터를 다루는 로직을 하나로 묶어 쉽게 관리하고 유지 보수하기 
 	 * 위함 입니다. 
 	 */
-}
+
