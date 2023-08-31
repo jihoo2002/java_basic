@@ -32,19 +32,24 @@ public class ArrayInsert {
 			System.out.println("이름을 입력해주세요: ");
 //			String name = sc.next();
 			people[i].setName(sc.next());
+			
 			System.out.println("나이를 입력해주세요: ");
 //			int age = sc.nextInt();
 			people[i].setAge(sc.nextInt());
+			
 			System.out.println("성별을 입력해주세요: ");
 //			String gender = sc.next();
 			people[i].setGender(sc.next());
+			//private로 선언된 name, age, gender이기에
+			//set을 써서 불러올 수 도 있다.
+			//get을 안쓰고 personInfo를 통해 값을 불러올수 있었기 때문에
+			//get은 굳이 쓰지 않았음
 			
 			
 //			Person p = new Person(name, age, gender);
 			//people[i] =p;
 			//42,43 합쳐서 작성한게 45번임
 //			people[i] = new Person(name, age, gender);
-			
 			System.out.println("***정보 입력 완료 ***\n");
 		}//입력받는 반복문 끝
 		

@@ -36,7 +36,7 @@ public class Player  {
 			return;
 		}
 		//출력 메세지 : x가 y를 공격합니다.
-		System.out.printf("%s(이)가 %s");
+//		System.out.printf("%s(이)가 %s");
 	void characterInfo() {
 		System.out.println("*** 캐릭터의 정보 ***");
 		System.out.println("아이디 : " +name);
