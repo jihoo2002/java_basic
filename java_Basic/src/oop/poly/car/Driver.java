@@ -9,7 +9,7 @@ public class Driver {
 	}
 	
 	public Car buyCar(String name) { //카 타입의 메서드
-		if(name.equals("소나다")) {
+		if(name.equals("소나타")) {
 			System.out.println("소나타를 구입합니다.");
 			return new Sonata();
 		}else if(name.equals("포르쉐")) {

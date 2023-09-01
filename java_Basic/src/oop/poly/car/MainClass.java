@@ -41,8 +41,11 @@ public class MainClass {
 		
 		System.out.println("==================");
 		
-		Car c = kim.buyCar("테슬라");
-		c.run();
+//		Car c = kim.buyCar("테슬라");
+		Tesla myTesla =(Tesla) kim.buyCar("테슬라"); //driver타입을 Tesla로
+//		c.run();
+//		Tesla myTesla = (Tesla)c;
+		myTesla.activeAutoPoilot();
 	}
 
 }

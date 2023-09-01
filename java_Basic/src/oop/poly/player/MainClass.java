@@ -37,5 +37,14 @@ public class MainClass {
 		 for(Player p :player) {
 			 m1.blizzard(p);
 		 }
+		 
+		 System.out.println("==================");
+	
+		 w1.rush(w2);
+		 w1.rush(m1);
+		 w1.rush(h2);
+		 
+		 
+		
 	 }
 }
