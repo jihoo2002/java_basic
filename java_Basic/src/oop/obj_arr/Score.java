@@ -72,7 +72,7 @@ public class Score {
 	}
 
 	public void ScoreInfo() {
-		System.out.printf("이름:%s\n 국어점수:%d\n 영어점수:%d\n 수학점수:%d 총점:%d\n 평균: %f\n",
+		System.out.printf(" 이름:%s\n 국어점수:%d\n 영어점수:%d\n 수학점수:%d\n 총점:%d\n 평균: %.1f\n",
 				this.name, this.lang, this.eng, this.math, this.total, this.avg);
 	}
 	

@@ -29,19 +29,23 @@ public class ScoreMain {
 	
 			int total =0;
 			double avg = 0.0;
+			
 			System.out.println("이름: ");
 			String name = sc.next();
 			if(name.equals("그만")) break;
-		
+			
 			System.out.println("국어점수: ");
 			int lang = sc.nextInt();
+			
 			
 			System.out.println("영어점수: ");
 			int eng = sc.nextInt();
 			
+			
 			System.out.println("수학점수: ");
 			int math = sc.nextInt();
 		
+			
 			
 			total = lang + eng + math;
 			System.out.print("총점:" +total + " ");
@@ -53,13 +57,14 @@ public class ScoreMain {
 			score[i] = s;
 			
 			
+			
 			System.out.println("***정보 입력 완료***");
 		}
 
 
 		for(Score se : score) {
+			if(se == null) break;
 			se.ScoreInfo();
-			
 			
 		}
 		
