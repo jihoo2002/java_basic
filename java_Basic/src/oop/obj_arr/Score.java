@@ -20,7 +20,7 @@ public class Score {
 		this.eng = eng;
 		this.math = math;
 		this.avg =avg;
-		this.total = total;
+		this.total = total; //this.total은 위에 필드값 가르킴
 	}
 
 	public String getName() {
@@ -72,7 +72,7 @@ public class Score {
 	}
 
 	public void ScoreInfo() {
-		System.out.printf(" 이름:%s\n 국어점수:%d\n 영어점수:%d\n 수학점수:%d\n 총점:%d\n 평균: %.1f\n",
+		System.out.printf(" 이름:%s   국어점수:%d   영어점수:%d   수학점수:%d\n 총점:%d\n 평균: %.2f\n",
 				this.name, this.lang, this.eng, this.math, this.total, this.avg);
 	}
 	
