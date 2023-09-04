@@ -19,25 +19,26 @@ public class ImplClass1 implements Inter, Inter2{
 	public void method1() {
 		System.out.println("Inter의 추상 메서드 구현!");
 		
-	}//inter에서 선언된 추상메소드 method1
+	}//inter에서 선언된 추상메소드 method1를 재정의 
 
 	
 	@Override
 	public void method2() {
 		System.out.println("Inter의 추상 메서드 구현!");
-		
+		//inter2에서 선언된 추상 메소드 method2를 재정의 
 	}
 
 
 	@Override
 	public void parentMethod() {
 		System.out.println("부모 인터페이스 메서드 구현");
+		//inter, inter2 가 상속받은 ParentInter의 메소드 
 		
 	}
 	
 	public void method3() {
 		System.out.println("ImplClass1의 메서드 구현 ");
-
+		//ImplClass1의 자체적인 메소드 
 	}
 	
 

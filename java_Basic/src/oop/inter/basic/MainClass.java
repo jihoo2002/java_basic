@@ -1,5 +1,7 @@
 package oop.inter.basic;
 
+import java.util.Arrays;
+
 public class MainClass {
 
 	public static void main(String[] args) {
@@ -31,13 +33,14 @@ public class MainClass {
 		Inter it1 = new ImplClass1(); //다형성
 		//method2, 3는 ImplClass만이 가진 고유 메서드 
 		
-		it1.method1();
+		it1.method1(); // 재정의 된 메서드를 불러올 수 있음
 		it1.parentMethod(); //parentInter를 상속받은 Inter이기에 상속됨
 		
 		
 		//연산자 우선순위
 		//괄호() ->참조(.) ->단항 ->2항->3항->대입
-		((ImplClass1)it1).method2();
+		((ImplClass1)it1).method2(); //자식 클래스에만 있는 메서드 
+		
 		//.의 연산자 우선순위가 더 먼저이기에 .앞이 먼저 실행되기 전에
 		// it1.method2()이 먼저 실행된다.
 		//그래서 ()를 한번 더 씌어서 우선순위를 .앞으로 옮겨줌
@@ -47,9 +50,11 @@ public class MainClass {
         - 인터페이스의 다형성도 앞에서 배운 클래스의 다형성처럼
          정보가 없다면 메서드 호출이 불가능하기 때문에 형 변환이 필요합니다.
          
+         
         - 구현하는 클래스가 서로 다른 인터페이스들을 동시에 구현하고 있다면
          구현하는 클래스들끼리 서로 즉시 형 변환이 가능합니다.
         */
+		
 		((Inter2)it1).method2(); //ImplClass는 inter, inter2다 가지고 있기에 
 		//ImplClass를 Inter2로 바꿔도 된다. 
 		
@@ -66,7 +71,8 @@ public class MainClass {
 		
 		ParentInter[] inters = {it1, it2, it3, it4};
 		//객체들을 부모 배열에 다 담을 수 있다
-	
+		
+		
 	}
 
 }

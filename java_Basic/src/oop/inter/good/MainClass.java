@@ -19,7 +19,7 @@ public class MainClass {
 		
 		if(menu ==1) {
 			sv = new Join(); //조인 주소값을 sv에 넘겨줌
-			sv.execute();
+			sv.execute(); //join에서 오버라이딩한 execute를 출력함
 		}else if(menu ==2) {
 			sv = new Login();
 			sv.execute();
