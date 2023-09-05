@@ -13,7 +13,7 @@ public class LoginUser  {
 		this.userPassword = userPassword;
 	}
 	
-	//로그인 검증
+	//로그인 검증 || 메소드 
 	public String loginValidate(String inputAccount, String inputPassword)throws LoginValidateExample {
 		// 계정명이 일치하는가?
 		if(userAccount.equals(inputAccount)) {
