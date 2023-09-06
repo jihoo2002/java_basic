@@ -26,6 +26,7 @@ public class ArraysQuiz {
 				
 			}
 		}
+		
 		return participant[participant.length-1];
 		}
 		
