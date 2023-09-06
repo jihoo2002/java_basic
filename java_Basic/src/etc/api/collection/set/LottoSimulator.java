@@ -2,8 +2,11 @@ package etc.api.collection.set;
 
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Random;
 import java.util.Set;
+
+import javax.swing.plaf.basic.BasicRadioButtonMenuItemUI;
 
 public class LottoSimulator {
 static Random r = new Random();
@@ -24,7 +27,7 @@ static Random r = new Random();
 //          중복이 발생하면 안됩니다.
 //         */  
 	   
-	
+	while(true) {
 	   int k = r.nextInt(45) +1;
 	   int k1 = r.nextInt(45) +1;
 	   int k2 = r.nextInt(45) +1;
@@ -42,6 +45,7 @@ static Random r = new Random();
 	 }
 	 return set;
    }
+   }
 //    
 //    
 //   보너스 번호를 생성하는 메서드(당첨번호 피해서 ) 
@@ -52,12 +56,18 @@ static Random r = new Random();
           당첨번호들을 피해서 보너스번호 하나만 뽑아 주세요.
           범위는 마찬가지로 1 ~ 45 사이의 난수입니다.
          */
-	  
-	  
+	 Iterator<Integer> iter = set.iterator();
+	 int n =r.nextInt(45)+1; 
+	 if(!(set.contains(n))) {
+		 
+		   n = r.nextInt(45) +1;
+		 	
+	 }
+	  return n;
  }
 //    
 //    //당첨 등수를 알려주는 메서드
-// public static void checkLottoNumber(???, ???, ???) {
+ public static void checkLottoNumber(Set<Integer>set1, Set<Integer>set2, int set3) {
 //        /*
 //         매개값으로 당첨번호집합, 구매한 로또 번호집합, 보너스번호를 받습니다.
 //         내 로또 번호와 당첨번호를 비교하여
@@ -70,13 +80,17 @@ static Random r = new Random();
 //         3개 일치 -> 5등
 //         나머지 -> 꽝
 //         */
-//  }
+	 set1 = createLotto();
+	 
+	 set3 = createBonusNum(createLotto());
+	 
+  }
 //    
     public static void main(String[] args) {
 //로또 번호 생성 메서드를 호출해서 당첨 번호를 하나 고정시키세요.
     	System.out.println("당첨번호: " + createLotto());
         //보너스번호도 하나 고정시키세요.
-        System.out.println();
+        System.out.println("추가 번호:"+createBonusNum(createLotto()) );
     	
         while(true) {
             /*
