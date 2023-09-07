@@ -25,7 +25,9 @@ static Random r = new Random();
 //	        컬렉션 자료형에 모아서 리턴해 주세요.
 //	        무엇을 쓰든 상관하지 않겠습니다.
 //	        중복이 발생하면 안됩니다.+6
-//	       */
+//	       */ 
+	   //6<6 ->false
+	   
 	    	while(set.size() < 6) {
 	    		   int num = r.nextInt(45)+1;
 	    		   set.add(num);
@@ -46,10 +48,11 @@ static Random r = new Random();
 		 int bonus = r.nextInt(45)+1;
 		 if(!set.contains(bonus)) { //당첨로또 번호 안에 보너스 번호가 없다면 리턴해라 
 			 return bonus; //리턴값 주면 메서드 끝나기에 break 안써두 됨
-		 }
-	 }
+		 		}
+	 		}
  } 
 	 
+ 
 //    //당첨 등수를 알려주는 메서드
  public static void checkLottoNumber(Set<Integer>win, Set<Integer> myLotto, int bonus) {
 //        /*

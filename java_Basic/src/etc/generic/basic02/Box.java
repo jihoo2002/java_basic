@@ -7,12 +7,13 @@ public class Box<K,V> {
 	
 	
 	
+	
 	public Box(K key, V value) {
 		super();
 		this.key = key;
 		this.value = value;
 	}
-	
+
 	public void put(K key, V value) {
 		this.key = key;
 		this.value = value;
