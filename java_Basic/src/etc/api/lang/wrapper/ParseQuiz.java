@@ -34,12 +34,12 @@ public class ParseQuiz {
 		
 			if(!input.contains("-") ) {
 					System.out.println("잘못된 주민번호입니다. 다시 입력하세요.");
-					continue;
+				continue;
 			
 			}else {
 				
 				String[] part = input.split("-"); //하이픈 기준으로 앞뒤 나누기
-				
+				//020529-4211111
 				
 				int year = Integer.parseInt(part[0].substring(0, 2));
 				int month = Integer.parseInt(part[0].substring(2,4));
@@ -54,12 +54,13 @@ public class ParseQuiz {
 				
 				int age =0;
 				if(first == '3' || first == '4') { //3이거나 4면 2000년대 출생자
-					age =20;
+					age =20; //20
 				}else { //아니면 1900년대 출생자
 					age = 19;
 				}
 				
-				int year1 = age * 100 + year;
+				int year1 = age * 100 + year;// 20 *100 +2 ==> 2002
+				//년도 추출
 				int age1 = 2023-year1;
 				
 				String gender = (first =='1' || first =='3')? "남자" : "여자";
